@@ -15,4 +15,12 @@ jobs:
       - name: Run markdown lint
         run: |
           npm install remark-cli remark-preset-lint-consistent
-          npx remark "**/*.md" --use remark-preset-lint-consistent --frail
+          npx remark . --use remark-preset-lint-consistent --frail
+      - name: Run PowerShell lint
+        run: |
+          Install-Module -Name PSScriptAnalyzer -Force -Scope CurrentUser
+          $files = Get-ChildItem -Path . -Recurse -Filter "*.ps1"
+          foreach ($file in $files) {
+            Invoke-ScriptAnalyzer -Path $file.FullName -Recurse -Settings Default
+          }
+        shell: pwsh
