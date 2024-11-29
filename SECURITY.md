@@ -5,7 +5,7 @@ We take security seriously and appreciate your efforts to responsibly disclose v
 ## How to Report a Vulnerability
 
 If you believe you have found a security vulnerability in this project, please send an email to **security@example.com**. Include the following details in your report:
-
+[GitHubのセキュリティ報告フォーム](https://github.com/OWNER/REPO/security/advisories)
 1. Description of the vulnerability
 2. Steps to reproduce the issue
 3. Potential impact
